@@ -1,0 +1,98 @@
+<header>
+  <nav>
+    <div class="logo">
+      <a href="#">
+        <img src="assets/LogoBlanc17R.svg" alt="Logo" />
+      </a>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">A propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="mainArea">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="box column is-one-third">
+        <h1 class="title has-text-centered">{{title}}</h1>
+
+        <div class="field">
+          <label>Longueur du mot de passe</label>
+          <input class="input" type="text" (change)="lengthPassword($any($event.target).value)" />
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="upperLetters()" type="checkbox" />
+              Inclure des lettres majuscules
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="lowerLetters()" type="checkbox" />
+              Inclure des lettres minuscules
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="numbers()" type="checkbox" />
+              Inclure des chiffres
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input (change)="specialCharacters()" type="checkbox" />
+              Inclure des caractères spéciaux
+            </label>
+          </div>
+        </div>
+
+        <!-- <div class="field">
+          <label>Nombre de mot de passe à générer</label>
+          <input type="number">
+        </div> -->
+
+        <div class="field">
+          <button
+            [disabled]="!(length && (includeLowercaseLetters || includeUppercaseLetters || includeNumbers || includeSpecialCharacters))"
+            (click)="buttonClick()" class="button is-link is-fullwidth">Générer un mot de passe</button>
+        </div>
+
+        @if(password){
+        <div class="box">
+          <label class="label">Mot de passe généré</label>
+          <div class="input-container">
+            <input class="input" [value]="password" />
+            <button (click)="copyToClipboard()" class="copy-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path
+                  d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        }
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 - Tous droits réservés</p>
+</footer>

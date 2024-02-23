@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #0DABCF;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    background-color: #0DABCF;
+    color: white;
+    font-size: 17px;
+}
+
+nav .logo {
+    width: 70px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.mainArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 750px;
+}
+
+.box {
+    margin-top: 3%;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    flex: 1;
+    margin-right: 10px
+}
+
+h1 {
+    font-size: 3.5em;
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background: #0DABCF;
+    background: linear-gradient(to right, #0DABCF 0%, #CF40AB 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button.is-link {
+    background-color: #0DABCF !important;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+@media (max-width: 1415px) {
+    h1 {
+        font-size: 3.3em;
+    }
+}
+
+@media (max-width: 1215px) {
+    h1 {
+        font-size: 2.7em;
+    }
+}
+
+@media (max-width: 905px) {
+    h1 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 769px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    .mainArea {
+        min-height: 700px;
+        width: 80%;
+        margin: auto;
+    }
+}
