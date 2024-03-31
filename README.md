@@ -14,7 +14,7 @@
 
 ## Features
 
-- the site is responsive and can be used on desktop, tablet, and mobile devices.
+- The site is responsive and can be used on desktop, tablet, and mobile devices.
 - The user can copy the generated password to the clipboard by clicking the copy button.
 - The password field becomes visible only when the password is generated.
 

@@ -7,23 +7,29 @@
     </div>
     <div class="menu">
       <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">A propos</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="" (click)="compte()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+              class="bi bi-person-vcard" viewBox="0 0 16 16">
+              <path
+                d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4m4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5M9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8m1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5" />
+              <path
+                d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96q.04-.245.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 1 1 12z" />
+            </svg>
+          </a></li>
       </ul>
     </div>
   </nav>
 </header>
 
 <div class="mainArea">
-  <div class="container">
+  <div class="container pt-5">
     <div class="columns is-centered">
       <div class="box column is-one-third">
         <h1 class="title has-text-centered">{{title}}</h1>
 
         <div class="field">
           <label>Longueur du mot de passe</label>
-          <input class="input" type="text" (change)="lengthPassword($any($event.target).value)" />
+          <input class="input" min="0" max="255" type="number" (change)="lengthPassword($any($event.target).value)" />
         </div>
 
         <div class="field">
@@ -96,3 +102,11 @@
 <footer>
   <p>© 2024 - Tous droits réservés</p>
 </footer>
+
+<!-- <script>
+  function compte() {
+    alert('Prochainement disponible');
+    console.log('Prochainement disponible');
+    console.log('Pour l\'instant, vous pouvez générer un mot de passe');
+  }
+</script> -->

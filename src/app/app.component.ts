@@ -42,6 +42,10 @@ export class AppComponent {
     this.includeSpecialCharacters = !this.includeSpecialCharacters;
   }
 
+  compte() {
+    alert("Prochainement disponible");
+  }
+
   buttonClick() {
     const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';

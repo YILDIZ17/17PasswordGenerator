@@ -9,16 +9,6 @@ nav {
     color: white;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-    background-color: #0DABCF;
-    color: white;
-    font-size: 17px;
-}
-
 nav .logo {
     width: 70px;
 }
@@ -39,11 +29,12 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 750px;
+    min-height: 650px;
 }
 
 .box {
-    margin-top: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .input-container {
@@ -77,6 +68,30 @@ h1 {
     cursor: pointer;
 }
 
+input[type="checkbox"] {
+    accent-color: #0DABCF !important;
+}
+
+input:active,
+input:focus {
+    border-color: #0DABCF !important;
+    box-shadow: none !important;
+}
+
+footer {
+    display: flex;
+    /* position: absolute;
+    width: 100%; */
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #0DABCF;
+    color: white;
+    font-size: 17px;
+    bottom: 0 !important;
+}
+
 @media (max-width: 1415px) {
     h1 {
         font-size: 3.3em;
@@ -95,14 +110,31 @@ h1 {
     }
 }
 
+@media (min-width: 770px) {
+    footer {
+        position: absolute;
+        width: 100%;
+    }
+}
+
 @media (max-width: 769px) {
     h1 {
         font-size: 2.8em;
     }
 
     .mainArea {
-        min-height: 700px;
+        min-height: 600px;
         width: 80%;
         margin: auto;
+    }
+
+    /* .copy-button {
+        border-radius: 80% !important;
+        border-color: #CF40AB !important;
+    } */
+
+    footer {
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 }
