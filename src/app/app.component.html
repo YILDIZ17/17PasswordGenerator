@@ -22,14 +22,15 @@
 </header>
 
 <div class="mainArea">
-  <div class="container pt-5">
+  <div class="container">
     <div class="columns is-centered">
       <div class="box column is-one-third">
         <h1 class="title has-text-centered">{{title}}</h1>
 
         <div class="field">
           <label>Longueur du mot de passe</label>
-          <input class="input" min="0" max="255" type="number" (change)="lengthPassword($any($event.target).value)" />
+          <input class="input" min="0" max="255" type="number" inputmode="numeric"
+            (change)="lengthPassword($any($event.target).value)" />
         </div>
 
         <div class="field">
