@@ -78,6 +78,19 @@ input:focus {
     box-shadow: none !important;
 }
 
+.message {
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     display: flex;
     /* position: absolute;
@@ -96,6 +109,7 @@ footer {
     h1 {
         font-size: 3.3em;
     }
+
     .mainArea {
         min-height: 0;
     }
@@ -122,6 +136,10 @@ footer {
         min-height: 600px;
         width: 80%;
         margin: auto;
+    }
+
+    .message {
+        display: none;
     }
 
     /* .copy-button {
