@@ -17,6 +17,7 @@ export class AppComponent {
   includeLowercaseLetters: boolean = false;
   includeNumbers: boolean = false;
   includeSpecialCharacters: boolean = false;
+  includeAll: boolean = false;
 
   lengthPassword(value: string) {
     const parsedValue = parseInt(value);
@@ -42,6 +43,15 @@ export class AppComponent {
     this.includeSpecialCharacters = !this.includeSpecialCharacters;
   }
 
+  all() {
+    this.includeAll = !this.includeAll;
+
+    this.includeUppercaseLetters = this.includeAll;
+    this.includeLowercaseLetters = this.includeAll;
+    this.includeNumbers = this.includeAll;
+    this.includeSpecialCharacters = this.includeAll;
+  }
+
   compte() {
     alert("Prochainement disponible");
   }
@@ -65,6 +75,9 @@ export class AppComponent {
     }
     if (this.includeSpecialCharacters) {
       validChars += specialCharacters;
+    }
+    if (this.includeAll) {
+      validChars += upperLetters + lowerLetters + numbers + specialCharacters;
     }
 
     let generatedPassword = '';
